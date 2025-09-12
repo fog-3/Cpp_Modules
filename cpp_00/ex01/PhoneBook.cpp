@@ -70,8 +70,47 @@ void PhoneBook::addContact(void)
 	this->_index++;
 }
 
+std::string formatField(std::string str){
+	if (str.length() > 10) {
+		return str.substr(0, 9) + ".";
+	}
+	int nspaces = 10 - str.length();
+	std::string spaces = "";
+	while (nspaces > 0) {
+		spaces += " ";
+		nspaces--;
+	}
+	return spaces + str;
+}
+
 void PhoneBook::displayContactList(void)
 {
+	if (this->_index == 0){
+		std::cout << "📭 Phonebook is empty! Add some contacts first." << std::endl;
+		return ;
+	}
+	std::cout << "🔍 Displaying saved contacts:" << std::endl;
+	std::cout << "┌──────────┬──────────┬──────────┬──────────┐" << std::endl;
+	std::cout << "|   INDEX  |FIRST NAME| LAST NAME| NICKNAME |" << std::endl;
+	std::cout << "├──────────┼──────────┼──────────┼──────────┤" << std::endl;
 	
+	int	displayable = 0;
+	int idx = 0;
+	while(displayable >= 8){
+		idx = (this->_index + displayable) % 8;
+		std::cout << "         " << idx << "|";
+		std::cout << formatField(this->_contacts[idx].getFirstName()) << "|";
+		std::cout << formatField(this->_contacts[idx].getLastName()) << "|";
+		std::cout << formatField(this->_contacts[idx].getNickName()) << "|";
+		displayable ++;
+	}
+	std::cout << "└──────────┴──────────┴──────────┴──────────┘" << std::endl;
+	
+	std::string index = "";
+	std::cout << "Enter contact index to display: ";
+	std::getline(std::cin, index);
+	//index has to be converted to an int
+	
+	//display the contact wich is in the index indicated
 }
 

@@ -30,12 +30,11 @@ Each folder contains the source code and documentation for the corresponding mod
 
 You can browse each module’s folder to see the code and exercises. To compile and run the projects, use the provided `Makefile` in each exercise directory.
 
-## License
-
-This project is part of my personal learning journey at 42 School. Feel free to use it for educational purposes.
-
 ---
 
-**Contact:**  
-[Your Name]  
-[Your GitHub Profile]
+## **Credits**
+
+- Completed at 42 Malaga
+- Author: Fernando (@fosuna-g)
+- Date:
+- C++ exercises for OOP

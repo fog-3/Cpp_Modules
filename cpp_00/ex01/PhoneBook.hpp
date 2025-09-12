@@ -9,6 +9,7 @@ class PhoneBook {
     private:
         Contact _contacts[8];
         int     _index;
+        std::string  formatField(std::string str);
     public:
         PhoneBook(void);
         ~PhoneBook(void);
