@@ -105,8 +105,6 @@ void PhoneBook::displayContactList(void)
 	std::cout << "|   INDEX  |FIRST NAME| LAST NAME| NICKNAME |" << std::endl;
 	std::cout << "├──────────┼──────────┼──────────┼──────────┤" << std::endl;
 	
-
-	// Vueltecita de tuerca que hay que hacerle a esta parte please
 	int	index
 	 = 0;
 	while(index < 8 && index < this->_index){
