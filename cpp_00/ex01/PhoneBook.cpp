@@ -30,7 +30,7 @@ void PhoneBook::addContact(void)
 
 	str = "";
 	if (this->_index > 7)
-		std::cout << "Warning: overwriting info about " << this->_contacts[this->_index % 8].getFirstName() << std::endl;
+		std::cout << "\033[31mWarning:\033[0m overwriting info about " << this->_contacts[this->_index % 8].getFirstName() << std::endl;
 	while (!std::cin.eof() && str == "")
 	{
 		std::cout << "Enter a first name: ";
@@ -86,12 +86,12 @@ std::string PhoneBook::formatField(const std::string &str) const {
 }
 
 void	PhoneBook::printContact(Contact contact){
-	std::cout << "📋 Contact details:" << std::endl;
+	std::cout << std::endl << "📋 Contact details:" << std::endl;
 	std::cout << "First name: " << contact.getFirstName() << std::endl;
 	std::cout << "Last name: " << contact.getLastName() << std::endl;
 	std::cout << "Nickname: " << contact.getNickName() << std::endl;
 	std::cout << "Phone number: " << contact.getPhoneNumber() << std::endl;
-	std::cout << "Darkest secret:: " << contact.getDarkestSecret() << std::endl;
+	std::cout << "Darkest secret:: " << contact.getDarkestSecret() << std::endl << std::endl;
 }
 
 void PhoneBook::displayContactList(void)
@@ -107,19 +107,18 @@ void PhoneBook::displayContactList(void)
 	
 
 	// Vueltecita de tuerca que hay que hacerle a esta parte please
-	int	displayable = 0;
-	int idx = 0;
-	while(displayable < 8 && displayable <= this->_index){
-		idx = (this->_index + displayable) % 8;
-		std::cout << "         " << idx << "|";
-		std::cout << formatField(this->_contacts[idx].getFirstName()) << "|";
-		std::cout << formatField(this->_contacts[idx].getLastName()) << "|";
-		std::cout << formatField(this->_contacts[idx].getNickName()) << "|";
-		displayable ++;
+	int	index
+	 = 0;
+	while(index < 8 && index < this->_index){
+		std::cout << "|         " << index << "|";
+		std::cout << formatField(this->_contacts[index].getFirstName()) << "|";
+		std::cout << formatField(this->_contacts[index].getLastName()) << "|";
+		std::cout << formatField(this->_contacts[index].getNickName()) << "|" << std::endl;
+		index ++;
 	}
 	std::cout << "└──────────┴──────────┴──────────┴──────────┘" << std::endl;
 	
-	int index = 0;
+	index = 0;
 	std::cout << "Enter contact index to display: ";
 	if (!(std::cin >> index)) {
 		std::cout << "Invalid index (it has to be an integer)" << std::endl;
