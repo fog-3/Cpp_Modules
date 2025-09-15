@@ -51,12 +51,14 @@ void PhoneBook::addContact(void)
 		if (std::getline(std::cin, str) && str != "")
 			this->_contacts[this->_index % 8].setNickName(str);
 	}
+	str = "";
 	while (!std::cin.eof() && str == "")
 	{
 		std::cout << "Enter " << this->_contacts[this->_index % 8].getFirstName() << "'s phoneNumber: ";
 		if (std::getline(std::cin, str) && str != "")
 			this->_contacts[this->_index % 8].setPhoneNumber(str);
 	}
+	str = "";
 	while (!std::cin.eof() && str == "")
 	{
 		std::cout << "Enter " << this->_contacts[this->_index % 8].getFirstName() << "'s darkestSecret: ";
@@ -70,7 +72,7 @@ void PhoneBook::addContact(void)
 	this->_index++;
 }
 
-std::string formatField(std::string str){
+std::string PhoneBook::formatField(const std::string &str) const {
 	if (str.length() > 10) {
 		return str.substr(0, 9) + ".";
 	}
@@ -81,6 +83,15 @@ std::string formatField(std::string str){
 		nspaces--;
 	}
 	return spaces + str;
+}
+
+void	PhoneBook::printContact(Contact contact){
+	std::cout << "📋 Contact details:" << std::endl;
+	std::cout << "First name: " << contact.getFirstName() << std::endl;
+	std::cout << "Last name: " << contact.getLastName() << std::endl;
+	std::cout << "Nickname: " << contact.getNickName() << std::endl;
+	std::cout << "Phone number: " << contact.getPhoneNumber() << std::endl;
+	std::cout << "Darkest secret:: " << contact.getDarkestSecret() << std::endl;
 }
 
 void PhoneBook::displayContactList(void)
@@ -94,9 +105,11 @@ void PhoneBook::displayContactList(void)
 	std::cout << "|   INDEX  |FIRST NAME| LAST NAME| NICKNAME |" << std::endl;
 	std::cout << "├──────────┼──────────┼──────────┼──────────┤" << std::endl;
 	
+
+	// Vueltecita de tuerca que hay que hacerle a esta parte please
 	int	displayable = 0;
 	int idx = 0;
-	while(displayable >= 8){
+	while(displayable < 8 && displayable <= this->_index){
 		idx = (this->_index + displayable) % 8;
 		std::cout << "         " << idx << "|";
 		std::cout << formatField(this->_contacts[idx].getFirstName()) << "|";
@@ -106,11 +119,20 @@ void PhoneBook::displayContactList(void)
 	}
 	std::cout << "└──────────┴──────────┴──────────┴──────────┘" << std::endl;
 	
-	std::string index = "";
+	int index = 0;
 	std::cout << "Enter contact index to display: ";
-	std::getline(std::cin, index);
-	//index has to be converted to an int
-	
-	//display the contact wich is in the index indicated
+	if (!(std::cin >> index)) {
+		std::cout << "Invalid index (it has to be an integer)" << std::endl;
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	} else if (index >= 0 && (index <= this->_index && index < 8)) {
+		printContact(this->_contacts[index]);
+		std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	} else {
+		std::cout << "Invalid index (index out of bounds)" << std::endl;
+		std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	}
 }
 

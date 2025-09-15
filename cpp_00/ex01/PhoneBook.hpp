@@ -9,14 +9,13 @@ class PhoneBook {
     private:
         Contact _contacts[8];
         int     _index;
-        std::string  formatField(std::string str);
+        std::string formatField(const std::string &str) const;
     public:
         PhoneBook(void);
         ~PhoneBook(void);
-        void    addContact(void);
-        void    displayContactList(void);
-        void    printContact(Contact contact);
-        Contact get_contact(int index);
+        void        addContact(void);
+        void        displayContactList(void);
+        void        printContact(Contact contact);
 };
 
 #endif
