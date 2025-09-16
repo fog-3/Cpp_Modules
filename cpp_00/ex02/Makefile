@@ -1,10 +1,10 @@
-SRC = test.cpp Account.cpp
+SRC = tests.cpp Account.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = g++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = phonebook
+NAME = account
 
 all: $(NAME)
 
