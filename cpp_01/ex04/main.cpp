@@ -6,7 +6,7 @@
 /*   By: fosuna-g <fosuna-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 12:02:49 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/09/18 19:11:00 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/09/20 14:46:20 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,24 +93,3 @@ int main(int argc, char const *argv[])
     }
     return 0;
 }
-
-/* int main(int argc, char const *argv[])
-{
-    std::string text;
-    std::string s1;
-    std::string s2;
-    int index = -1;
-    
-    if (argc == 4){
-        text = argv[1];
-        s1 = argv[2];
-        s2 = argv[3];
-        index = text.find(s1);
-        while (index != -1){
-            text = text.substr(0, index) + s2 + text.substr(index + s1.length(), text.length());
-            index = text.find(s1);
-        }
-        std::cout << text;
-    }
-    return 0;
-} */
