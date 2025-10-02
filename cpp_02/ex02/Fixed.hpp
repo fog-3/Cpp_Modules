@@ -6,7 +6,7 @@
 /*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 09:59:44 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/10/02 09:59:45 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/10/02 10:57:36 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,23 @@ class Fixed
 
         int getRawBits( void ) const;
         void setRawBits( int const raw );
+        
+        /* Operators */
         Fixed& operator=(const Fixed& other);
+        Fixed& operator>(const Fixed& other);
+        Fixed& operator<(const Fixed& other);
+        Fixed& operator>=(const Fixed& other);
+        Fixed& operator<=(const Fixed& other);
+        Fixed& operator==(const Fixed& other);
+        Fixed& operator!=(const Fixed& other);
         
         float toFloat( void ) const;
         int toInt( void ) const;
+
+        static Fixed& min(Fixed& fixed1, Fixed& fixed2);
+        static Fixed& min(const Fixed& fixed1,const Fixed& fixed2);
+        static Fixed& max(Fixed& fixed1, Fixed& fixed2);
+        static Fixed& max(const Fixed& fixed1,const Fixed& fixed2);
 };
 
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
