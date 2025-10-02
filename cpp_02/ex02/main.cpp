@@ -6,7 +6,7 @@
 /*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 09:59:48 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/10/02 09:59:49 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/10/02 12:39:54 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,13 @@
 
 int main( void ) {
     Fixed       a;
-    Fixed const b( 10 );
-    Fixed const c(42.42f);
-    Fixed const d(b);
-
-    a = Fixed(1234.4321f);
-
-    std::cout << "a is " << a << std::endl;
-    std::cout << "b is " << b << std::endl;
-    std::cout << "c is " << c << std::endl;
-    std::cout << "d is " << d << std::endl;
-
-    std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-    std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-    std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-    std::cout << "d is " << d.toInt() << " as integer" << std::endl;
-
+    Fixed const b(Fixed(0.05f) * Fixed(2));
+    
+    std::cout << a << std::endl;
+    std::cout << ++a << std::endl;
+    std::cout << a << std::endl;
+    std::cout << a++ << std::endl;
+    std::cout << a << std::endl;
+    
     return 0;
 }
