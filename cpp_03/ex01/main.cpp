@@ -1,0 +1,56 @@
+
+#include "ScavTrap.hpp"
+
+void testSection(const std::string& title) {
+    std::cout << "\n\033[1;36m=== " << title << " ===\033[0m" << std::endl;
+}
+
+int main() {
+    testSection("CONSTRUCCIÓN CON CADENA DE HERENCIA");
+    ScavTrap scav1("Guardian");
+    ScavTrap scav2("Protector");
+    
+    testSection("ATAQUES ESPECÍFICOS DE SCAVTRAP");
+    scav1.attack("intruder");
+    scav2.attack("enemy robot");
+    
+    testSection("MODO GUARDIA - MÉTODO EXCLUSIVO");
+    scav1.guardGate();
+    scav2.guardGate();
+    
+    testSection("DAÑO Y REPARACIÓN HEREDADOS");
+    scav1.takeDamage(30);
+    scav1.beRepaired(15);
+    scav1.attack("after repair");
+    
+    testSection("CONSTRUCTOR DE COPIA CON HERENCIA");
+    ScavTrap scav3(scav1);
+    scav3.attack("copied target");
+    scav3.guardGate();
+    
+    testSection("OPERADOR DE ASIGNACIÓN CON HERENCIA");
+    ScavTrap scav4("Temporary");
+    scav4 = scav2;
+    scav4.attack("assigned target");
+    scav4.guardGate();
+    
+    testSection("LÍMITES DE ENERGÍA SCAVTRAP (50 puntos)");
+    ScavTrap energyTest("EnergyBot");
+    for (int i = 0; i < 55; i++) {
+        std::cout << "Ataque #" << (i + 1) << ": ";
+        energyTest.attack("test dummy");
+    }
+    
+    testSection("LÍMITES DE VIDA SCAVTRAP (100 puntos)");
+    ScavTrap healthTest("HealthBot");
+    healthTest.takeDamage(95);
+    healthTest.beRepaired(10);
+    healthTest.takeDamage(20);  // It lefts 0 HP
+    healthTest.attack("should fail");
+    healthTest.guardGate();     // It can't attack but can guarGate
+    
+    std::cout << "\n\033[1;32m✅ Todas las pruebas completadas!\033[0m" << std::endl;
+    std::cout << "\033[1;33m(Los destructores se mostrarán a continuación)\033[0m" << std::endl;
+    
+    return 0;
+}
