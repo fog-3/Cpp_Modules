@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/07 09:10:31 by fosuna-g          #+#    #+#             */
+/*   Updated: 2025/10/07 12:00:52 by fosuna-g         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #include "ClapTrap.hpp"
 
@@ -89,21 +101,4 @@ int	ClapTrap::getEnergyPoints() const
 int	ClapTrap::getAttackDamage() const
 {
 	return attack_damage;
-}
-
-/* Setters */
-
-void	ClapTrap::setHitPoints(unsigned int points)
-{
-	this->hit_points = points;
-}
-
-void	ClapTrap::setEnergyPoints(unsigned int points)
-{
-	this->energy_points = points;
-}
-
-void	ClapTrap::setAttackDamage(unsigned int damage)
-{
-	this->attack_damage = damage;
 }

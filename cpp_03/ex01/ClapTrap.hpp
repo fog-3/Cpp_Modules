@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/07 09:10:34 by fosuna-g          #+#    #+#             */
+/*   Updated: 2025/10/07 12:01:01 by fosuna-g         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CLAPTRAP_HPP
 #define CLAPTRAP_HPP
 
@@ -26,11 +38,6 @@ public:
 	int getHitPoints() const;
 	int getEnergyPoints() const;
 	int getAttackDamage() const;
-
-	// Setters
-	void setHitPoints(unsigned int points);
-	void setEnergyPoints(unsigned int points);
-	void setAttackDamage(unsigned int damage);
 };
 
 #endif
