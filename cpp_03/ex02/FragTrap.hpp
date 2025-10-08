@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fosuna-g <fosuna-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 09:12:24 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/10/07 10:08:51 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/10/08 13:21:34 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class FragTrap : public ClapTrap{
 		
 		FragTrap& operator=(const FragTrap& other);
 
-		void HighFivesGuys();
+		void highFivesGuys();
 };
 
 #endif

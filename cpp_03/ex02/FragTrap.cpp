@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fosuna-g <fosuna-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 09:12:21 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/10/07 11:58:37 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/10/08 13:21:27 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ FragTrap& FragTrap::operator=(const FragTrap& other)
 	return *this;
 }
 
-void	FragTrap::HighFivesGuys()
+void	FragTrap::highFivesGuys()
 {
 	std::cout << "FragTrap " << name << " requests a positive high five! ✋" << std::endl;
 	std::cout << "   Let's celebrate! 🎉" << std::endl;

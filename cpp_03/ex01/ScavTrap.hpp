@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fosuna-g <fosuna-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 09:10:53 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/10/07 09:10:54 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/10/08 11:18:32 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,4 @@ class ScavTrap : public ClapTrap {
 		void guardGate();
 };
 
-#endif // SCAVTRAP_HPP
+#endif
