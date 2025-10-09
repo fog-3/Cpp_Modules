@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fosuna-g <fosuna-g@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 09:10:53 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/10/08 12:56:50 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/10/09 13:05:47 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class ScavTrap : virtual public ClapTrap {
 		// Constructors
 		ScavTrap(const std::string& name);
 		ScavTrap(const ScavTrap& other);
+		ScavTrap(void);
 
 		// Destructor
 		~ScavTrap();

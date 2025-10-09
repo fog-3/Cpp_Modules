@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fosuna-g <fosuna-g@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 09:14:29 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/10/08 13:33:06 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/10/09 13:12:30 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,11 @@ DiamondTrap::DiamondTrap(const DiamondTrap& other)
 {
 	name = other.name;
 	std::cout << "DiamondTrap " << name << " copy constructor called" << std::endl;
+}
+
+DiamondTrap::DiamondTrap(void)
+{
+	std::cout << "Default DiamondTrap constructor called" << std::endl;
 }
 
 DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other)

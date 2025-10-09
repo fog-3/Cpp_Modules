@@ -6,7 +6,7 @@
 /*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 09:10:34 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/10/07 12:00:36 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/10/09 13:01:56 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ protected:
 public:
 	ClapTrap(const std::string& name);
 	ClapTrap(const ClapTrap& other);
+	ClapTrap(void);
 	ClapTrap& operator=(const ClapTrap& other);
 	~ClapTrap();
 

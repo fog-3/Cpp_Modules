@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fosuna-g <fosuna-g@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 09:12:21 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/10/08 13:21:27 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/10/09 13:12:56 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other.getName())
 	energy_points = other.getEnergyPoints();
 	attack_damage = other.getAttackDamage();
 	std::cout << "FragTrap " << getName() << " copy constructor called" << std::endl;
+}
+
+FragTrap::FragTrap(void)
+{
+	std::cout << "Default FragTrap constructor called" << std::endl;
 }
 
 FragTrap::~FragTrap(void)

@@ -6,7 +6,7 @@
 /*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 09:10:31 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/10/07 12:00:22 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/10/09 13:01:41 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ ClapTrap::ClapTrap(const ClapTrap& other)
 	this->hit_points = other.getHitPoints();
 	this->energy_points = other.getHitPoints();
 	this->attack_damage = other.getAttackDamage();
+}
+
+ClapTrap::ClapTrap(void)
+{
+	std::cout << "Default ClapTrap constructor called" << std::endl;
 }
 
 ClapTrap::~ClapTrap(void)

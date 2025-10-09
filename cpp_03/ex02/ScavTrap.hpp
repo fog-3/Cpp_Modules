@@ -6,7 +6,7 @@
 /*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 09:10:53 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/10/07 10:09:02 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/10/09 13:04:11 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class ScavTrap : public ClapTrap {
 		// Constructors
 		ScavTrap(const std::string& name);
 		ScavTrap(const ScavTrap& other);
+		ScavTrap(void);
 
 		// Destructor
 		~ScavTrap();

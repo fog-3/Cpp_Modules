@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fosuna-g <fosuna-g@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 09:10:38 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/10/08 13:20:30 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/10/09 13:14:31 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,30 +18,30 @@ void testSection(const std::string& title) {
 }
 
 int main() {
-	testSection("CONSTRUCCIÓN DIAMONDTRAP");
+	testSection("DIAMONDTRAP CONSTRUCTION");
 	DiamondTrap diamond("Sparkle");
 	
-	testSection("MÉTODO WHOAMI");
+	testSection("WHOAMI METHOD");
 	diamond.whoAmI();
 	
-	testSection("ATAQUE (de ScavTrap)");
+	testSection("ATTACK (from ScavTrap)");
 	diamond.attack("target");
 	
-	testSection("HIGH FIVE (de FragTrap)");
+	testSection("HIGH FIVE (from FragTrap)");
 	diamond.highFivesGuys();
 	
-	testSection("GUARD GATE (de ScavTrap)");
+	testSection("GUARD GATE (from ScavTrap)");
 	diamond.guardGate();
 	
-	testSection("DAÑO Y REPARACIÓN");
+	testSection("DAMAGE AND REPAIR");
 	diamond.takeDamage(50);
 	diamond.beRepaired(25);
 	
-	testSection("CONSTRUCTOR DE COPIA");
+	testSection("COPY BUILDER");
 	DiamondTrap diamond2(diamond);
 	diamond2.whoAmI();
 	
-	testSection("DESTRUCCIÓN");
+	testSection("DESTRUCTION");
 	
 	return 0;
 }

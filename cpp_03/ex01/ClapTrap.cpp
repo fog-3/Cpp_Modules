@@ -6,7 +6,7 @@
 /*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 09:10:31 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/10/07 12:00:52 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/10/09 12:56:34 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ ClapTrap::ClapTrap(const ClapTrap& other)
 	this->hit_points = other.getHitPoints();
 	this->energy_points = other.getHitPoints();
 	this->attack_damage = other.getAttackDamage();
+}
+
+ClapTrap::ClapTrap(void)
+{
+	std::cout << "Default ClapTrap constructor called" << std::endl;
 }
 
 ClapTrap::~ClapTrap(void)
@@ -70,7 +75,6 @@ void	ClapTrap::takeDamage(unsigned int amount)
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	//ClapTrap R2-D2 repairs itself for 3 hit points, now has 8 hit points!
 	if (this->energy_points > 0 && this->hit_points > 0){
 		this->energy_points--;
 		hit_points += amount;
