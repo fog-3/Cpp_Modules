@@ -6,7 +6,7 @@
 /*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 09:58:39 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/10/02 09:58:40 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/10/09 12:31:01 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,19 +58,13 @@ void    Harl::complain(std::string level)
     switch (logLevel) {
         case 1:
             debug();
-            info();
-            warning();
-            error();
-            break;
+            // fallthrough
         case 2:
             info();
-            warning();
-            error();
-            break;
+            // fallthrough
         case 3:
             warning();
-            error();
-            break;
+            // fallthrough
         case 4:
             error();
             break;
