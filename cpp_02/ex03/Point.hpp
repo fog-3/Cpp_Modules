@@ -6,7 +6,7 @@
 /*   By: fosuna-g <fosuna-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 13:13:41 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/10/03 14:22:26 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/11/01 21:00:37 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Point
   public:
     Point(void);
     Point(const float valx, const float valy);
+    Point(const Fixed valx, const Fixed valy);
     Point(const Point& otherPoint);
     ~Point(void);
 

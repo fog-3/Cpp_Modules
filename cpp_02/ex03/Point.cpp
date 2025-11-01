@@ -6,7 +6,7 @@
 /*   By: fosuna-g <fosuna-g@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 13:13:39 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/10/03 14:57:18 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/11/01 21:01:33 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@ Point::Point(void): _x(0), _y(0)
 
 Point::Point(const float valx, const float valy): _x(valx), _y(valy)
 {
+}
+
+Point::Point(const Fixed valx, const Fixed valy): _x(valx), _y(valy)
+{	
 }
 
 Point::Point(const Point& otherPoint): _x(otherPoint.get_x()), _y(otherPoint.get_y())
