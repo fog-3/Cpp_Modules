@@ -6,7 +6,7 @@
 /*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 09:14:29 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/10/09 13:12:30 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/11/21 16:28:31 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,14 @@ DiamondTrap::DiamondTrap(const DiamondTrap& other)
 	std::cout << "DiamondTrap " << name << " copy constructor called" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(void)
+DiamondTrap::DiamondTrap(void) 
+	: ClapTrap((std::string)"default" + "_clap_name"), FragTrap("default"), ScavTrap("default")
 {
+	hit_points = FragTrap::getHitPoints();
+	energy_points = ScavTrap::getEnergyPoints();
+	attack_damage = FragTrap::getAttackDamage();
+	name = "default";
+
 	std::cout << "Default DiamondTrap constructor called" << std::endl;
 }
 

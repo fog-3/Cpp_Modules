@@ -6,7 +6,7 @@
 /*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 09:10:42 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/10/09 13:05:36 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/11/21 16:21:04 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,11 @@ ScavTrap::ScavTrap(const ScavTrap& other) : ClapTrap(other.getName())
 	std::cout << "ScavTrap " << getName() << " copy constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(void)
+ScavTrap::ScavTrap(void) : ClapTrap("default")
 {
+	hit_points = 100;
+	energy_points = 50;
+	attack_damage = 20;
 	std::cout << "Default ScavTrap constructor called" << std::endl;
 }
 

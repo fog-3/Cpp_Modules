@@ -6,7 +6,7 @@
 /*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 09:12:21 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/10/09 13:12:56 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/11/21 16:19:06 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,11 @@ FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other.getName())
 	std::cout << "FragTrap " << getName() << " copy constructor called" << std::endl;
 }
 
-FragTrap::FragTrap(void)
+FragTrap::FragTrap(void) : ClapTrap("default")
 {
+	hit_points = 100;
+	energy_points = 100;
+	attack_damage = 30;
 	std::cout << "Default FragTrap constructor called" << std::endl;
 }
 
