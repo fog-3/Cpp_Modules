@@ -93,5 +93,3 @@ void Character::use(int idx, ICharacter& target)
 		std::cout << "No Materia found on the inventory" << std::endl;
 	}
 }
-
-
