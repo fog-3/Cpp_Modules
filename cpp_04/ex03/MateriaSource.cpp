@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   MateriaSource.cpp                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/18 11:09:38 by fosuna-g          #+#    #+#             */
+/*   Updated: 2025/12/18 11:24:05 by fosuna-g         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "MateriaSource.hpp"
 #include <iostream>
@@ -52,6 +63,7 @@ MateriaSource& MateriaSource::operator=(const MateriaSource& other)
 				this->templates[i] = other.templates[i]->clone();
 		}
 	}
+	return *this;
 }
 
 void MateriaSource::learnMateria(AMateria* m)

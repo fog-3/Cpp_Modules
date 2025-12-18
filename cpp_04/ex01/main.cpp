@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fosuna-g <fosuna-g@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 09:06:24 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/12/17 11:20:54 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/12/18 11:07:08 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "Brain.hpp"
 #include <iostream>
 
-#define N_ANIMALS 4 // Small number for easier reading, subject asks for more usually (e.g. 10 or 100)
+#define N_ANIMALS 4
 
 int main()
 {
@@ -76,15 +76,12 @@ int main()
 	Dog* dog4 = new Dog();
 
 	std::cout << "2. Creating copy Dog" << std::endl;
-	*dog4 = *dog3; // Assig nement method
+	*dog4 = *dog3; // Assign nement method
 
 	std::cout << "3. Deleting original Dog" << std::endl;
 	delete dog3; 
 	
 	std::cout << "4. Checking if copy is still alive" << std::endl;
-	// IF COPY WAS SHALLOW: dog2's brain would have been deleted with dog1.
-	// Accessing it now would crash (segfault) or show garbage.
-	// IF COPY WAS DEEP: dog2 is totally fine.
 	
 	dog4->makeSound(); // Should still work
 	

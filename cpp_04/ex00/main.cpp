@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fosuna-g <fosuna-g@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 09:06:24 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/12/16 13:01:08 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/12/18 11:05:15 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,6 @@ int main()
 
 	std::cout << wrongCat->getType() << " " << std::endl;
 
-	// ISSUE HERE:
-	// Even though 'wrongCat' points to a WrongCat object, 
-	// the pointer is of type 'WrongAnimal*'.
-	// Since makeSound() is NOT virtual, it calls the WrongAnimal sound.
 	wrongCat->makeSound(); 
 	
 	wrongMeta->makeSound();

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fosuna-g <fosuna-g@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 09:06:11 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/12/17 11:08:13 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/12/18 11:08:00 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 Cat::Cat() : Animal()
 {
-	this->type = "Cat"; // Set the inherited variable
+	this->type = "Cat";
 	brain = new Brain();
 	std::cout << "Cat constructed" << std::endl;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fosuna-g <fosuna-g@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 09:06:18 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/12/17 11:08:06 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2025/12/18 11:08:05 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 Dog::Dog() : Animal()
 {
-	this->type = "Dog"; // Set the inherited variable
+	this->type = "Dog";
 	brain = new Brain();
 	std::cout << "Dog constructed" << std::endl;
 }
