@@ -6,7 +6,7 @@
 /*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 11:05:38 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/12/18 11:05:41 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2026/02/26 17:33:50 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ Brain::Brain(const Brain& other)
 
 Brain::~Brain()
 {
+    std::cout << "Brain destroyed" << std::endl;
 }
 
 Brain& Brain::operator=(const Brain& other)

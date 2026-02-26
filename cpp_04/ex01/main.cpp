@@ -6,7 +6,7 @@
 /*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 09:06:24 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/12/18 11:07:08 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2026/02/26 17:57:54 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int main()
 	// Accessing it now would crash (segfault) or show garbage.
 	// IF COPY WAS DEEP: dog2 is totally fine.
 	
-	dog2->makeSound(); // Should still work
+	dog2->makeSound();
 	
 	std::cout << "5. Deleting copy Dog" << std::endl;
 	delete dog2;
@@ -76,14 +76,14 @@ int main()
 	Dog* dog4 = new Dog();
 
 	std::cout << "2. Creating copy Dog" << std::endl;
-	*dog4 = *dog3; // Assign nement method
+	*dog4 = *dog3; // Assignement method
 
 	std::cout << "3. Deleting original Dog" << std::endl;
 	delete dog3; 
 	
 	std::cout << "4. Checking if copy is still alive" << std::endl;
 	
-	dog4->makeSound(); // Should still work
+	dog4->makeSound();
 	
 	std::cout << "5. Deleting copy Dog" << std::endl;
 	delete dog4;

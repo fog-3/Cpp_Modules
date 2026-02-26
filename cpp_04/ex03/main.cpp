@@ -6,7 +6,7 @@
 /*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 11:09:32 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/12/18 11:46:15 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2026/02/26 18:48:42 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,9 @@ int main()
 	IMateriaSource* factory = new MateriaSource();
 	factory->learnMateria(new Ice());
 	
-	original->equip(factory->createMateria("ice"));
+	// (We have to save the pointer to delete it later, avoiding leaks for this specific test)
+	AMateria* itemToDrop = factory->createMateria("ice");
+	original->equip(itemToDrop);
 	original->equip(factory->createMateria("ice"));
 
 	// 2. Test Copy Constructor
@@ -69,8 +71,8 @@ int main()
 
 	// 3. Test Deep Copy Logic
 	std::cout << "[INFO] Modifying Original (Unequip slot 0)..." << std::endl;
-	// (We save the pointer to delete it later, avoiding leaks for this specific test)
 	original->unequip(0); // Original loses item
+	delete itemToDrop; // We delete this item to avoid memory leaks
 
 	std::cout << "[INFO] Testing Copy (Should still have item in slot 0)..." << std::endl;
 	// If shallow copy: Copy would point to NULL or deleted memory -> CRASH
@@ -93,7 +95,8 @@ int main()
 
 	std::cout << "[INFO] Filling inventory (4 slots)..." << std::endl;
 	cloud->equip(spellBook->createMateria("ice")); // 0
-	cloud->equip(spellBook->createMateria("cure")); // 1
+	AMateria* itemToDrop2 = spellBook->createMateria("cure");
+	cloud->equip(itemToDrop2); // 1
 	cloud->equip(spellBook->createMateria("ice")); // 2
 	cloud->equip(spellBook->createMateria("cure")); // 3
 
@@ -107,7 +110,6 @@ int main()
 	
 	std::cout << "[INFO] Unequipping slot 1..." << std::endl;
 	// SAVE POINTER FIRST to avoid leak (Subject says unequip must not delete)
-	// In a real project, you'd have a "Floor" class. Here we handle manually.
 	// Note: Since ICharacter doesn't have getters, we technically "lose" it here 
 	// unless we kept a reference to 'extra' or modified the class. 
 	// For strict subject compliance, we just accept the unequip logic.
@@ -116,6 +118,7 @@ int main()
 	cloud->use(1, *cloud); // Should do nothing (empty slot)
 
 	// CLEANUP
+	delete itemToDrop2;
 	delete extra;
 	delete cloud;
 	delete spellBook;
