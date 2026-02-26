@@ -6,7 +6,7 @@
 /*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 11:09:38 by fosuna-g          #+#    #+#             */
-/*   Updated: 2025/12/18 11:24:05 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2026/02/26 19:12:43 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ void MateriaSource::learnMateria(AMateria* m)
 		i++;
 	if (i == 4)
 	{
+		delete m;
 		std::cout << "MateriaSource is full of templates!" << std::endl;
 	}
 	else

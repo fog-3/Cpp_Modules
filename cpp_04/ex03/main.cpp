@@ -6,7 +6,7 @@
 /*   By: fosuna-g <fosuna-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 11:09:32 by fosuna-g          #+#    #+#             */
-/*   Updated: 2026/02/26 18:48:42 by fosuna-g         ###   ########.fr       */
+/*   Updated: 2026/02/26 19:13:18 by fosuna-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,8 +90,14 @@ int main()
 
 	ICharacter* cloud = new Character("Cloud");
 	IMateriaSource* spellBook = new MateriaSource();
+	std::cout << "[INFO] Learning all the MateriaSource (4 slots)..." << std::endl;
 	spellBook->learnMateria(new Ice());
 	spellBook->learnMateria(new Cure());
+	spellBook->learnMateria(new Cure());
+	spellBook->learnMateria(new Cure());
+	std::cout << "[INFO] Trying to learn 5th materia (Should do nothing)..." << std::endl;
+	spellBook->learnMateria(new Cure());
+
 
 	std::cout << "[INFO] Filling inventory (4 slots)..." << std::endl;
 	cloud->equip(spellBook->createMateria("ice")); // 0
